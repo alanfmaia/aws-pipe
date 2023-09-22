@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Iniciando o Pre Build dependencias
+      - npm install
+  build:
+    commands:
+      - echo Iniciando o Build em `date`
+      - npm run build
+  post_build:
+    commands:
+      - echo Build Finalizado `date`
+artifacts:
+  files:
+    - build/**/*
+    - appsec.yml
+    - Scripts/**/*
